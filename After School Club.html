@@ -48,5 +48,12 @@
                     this.product.availableInventory -= 1;
                 },
             },
+            computed: {
+                canAddToCart() {
+                    return this.product.availableInventory > 0;
+                }
+            },
+        });
+    </script>
 </body>
 </html>
