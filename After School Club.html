@@ -42,5 +42,11 @@
                 cart: [],
                 showProduct: true,
             },
+            methods: {
+                addToCart() {
+                    this.cart.push(this.product.id);
+                    this.product.availableInventory -= 1;
+                },
+            },
 </body>
 </html>
