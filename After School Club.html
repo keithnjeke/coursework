@@ -11,5 +11,19 @@
         <header>
             <h1 v-text="sitename"></h1>
         </header>
+        <main>
+            <div>
+                <figure>
+                    <img v-bind:src="product.image">
+                </figure>
+                <h2 v-text="product.title"></h2>
+                <p v-html="product.location"></p>
+                <p>Price: {{product.price}}</p>
+                <p>Number of spaces: {{product.availableInventory  }}</p>
+                <button v-on:click='addToCart' v-if='canAddToCart'>Add to cart</button>
+                <button disabled="disabled" v-else>Add to cart</button>
+            </div>
+        </main>
+    </div> 
 </body>
 </html>
